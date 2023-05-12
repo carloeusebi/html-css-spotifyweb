@@ -1,26 +1,30 @@
 /* css reset */
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ! CUSTOM PROPERTIES */
+/* ! ************************** */
+/* ! CUSTOM PROPERTIES ********* /
+/* ! ************************** */
 :root{
+    /* colors */
     --menubar-bg-color: #000000;
     --hdr-bg-color: #080b12;
     --footer-bg-color: #282828;
     --main-bg-color: #141922;
     --menubar-text-gray: #ffffff60;
 
-
+    /* dimensions */
     --hdr-ftr-height: 100px;
     --menubar-lg-width: 250px;
     --menubar-xs-width: 50px;
 }
 
-/* ! GENERALS */
+/* ! ************************** */
+/* ! GENERALS ***************** */
+/* ! ************************** */
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -53,20 +57,23 @@ img{
     max-width: calc(100% - var(--menubar-xs-width));
 }
 
+/* scrollbars */
 ::-webkit-scrollbar{
     width: 5px;
 }
 
 ::-webkit-scrollbar-thumb{
     background-color: var(--menubar-text-gray);
-    border-radius: 5px;
 }
 
 main::-webkit-scrollbar{
     width: 10px;
 }
 
-/* ! UTILITIES */
+/* ! ************************** */
+/* ! UTILITIES **************** */
+/* ! ************************** */
+/* svg filter makes svg same color as text-gray*/
 .svg-gray{
     filter:invert(.4)
 }
@@ -75,12 +82,16 @@ main::-webkit-scrollbar{
     color: var(--menubar-text-gray);
 }
 
-.c-pointer{
-    cursor: pointer;
-}
-
 .text-bold{
     font-weight: bold;
+}
+
+.font-small{
+    font-size: .75rem;
+}
+
+.c-pointer{
+    cursor: pointer;
 }
 
 .text-align-center{
@@ -177,7 +188,9 @@ main::-webkit-scrollbar{
     font-weight: bold;
 }
 
-/* ! HEADER */
+/* ! ************************** */
+/* ! HEADER ******************* */
+/* ! ************************** */
 header{
     background-color: var(--hdr-bg-color);
 
@@ -194,7 +207,9 @@ header .btn:hover{
     transform: scale(1.05);
 }
 
-/* ! MENUBAR */
+/* ! ************************** */
+/* ! MENUBAR ****************** */
+/* ! ************************** */
 #left-menubar{
     background-color: var(--menubar-bg-color);
     flex: 0 0 var(--menubar-xs-width);
@@ -205,8 +220,8 @@ header .btn:hover{
     padding: 15px;
 }
 
-#left-menubar > *{
-    width: 100%;
+#left-menubar .logo .tablet{
+    width: 75%;
 }
 
 #menubar-nav img{
@@ -217,26 +232,14 @@ header .btn:hover{
     margin-bottom: 5px;
 }
 
-#menubar-nav li:first-child{
-    border-left: 5px solid yellowgreen;
-    border-right: 5px solid transparent;
-    margin-left: -15px;
-    padding-left: 10px;
-}
-
-/* #Playlist */
+/* # Playlist */
 #playlist-list{
     min-height: 50px;
     overflow-y: auto;
 }
 
-.playlist div:first-child{
+.playlist h3{
     color: white;
-    font-weight: bold;
-}
-
-#playlist-list li{
-    margin-bottom: 10px;
 }
 
 .add-playlist .plus-simbol{
@@ -274,7 +277,9 @@ header .btn:hover{
     overflow: hidden;
 }
 
-/* ! MAIN */
+/* ! ************************** */
+/* ! MAIN ********************* */
+/* ! ************************** */
 main{
     background-color: var(--main-bg-color);
     overflow-y: auto;
@@ -284,7 +289,6 @@ main{
 }
 
 #contents-navbar li{
-    font-size: .7rem;
     transition: color 300ms;
 }
 
@@ -292,21 +296,21 @@ main{
     color: white;
 }
 
-#contents-navbar li:first-of-type{
+#contents-navbar li.selected{
     position: relative;
 }
 
-#contents-navbar li:first-of-type::before{
+#contents-navbar li.selected::before{
     position: absolute;
     content: '';
     display: inline-block;
     height: 3px;
     background-color: yellowgreen;
+    border-radius: 10px;
     width: 33%;
     left: 50%;
     top: 120%;
     transform: translateX(-50%);
-
 }
 
 main .flex-container{
@@ -316,7 +320,7 @@ main .flex-container{
 
 main .d-flex > .flex-item{
     flex: 0 0 50%;
-    padding: 10px;
+    padding: 5px;
 }
 
 main .flex-item .album-cover{
@@ -344,14 +348,14 @@ main .round-album:hover::after{
     border-radius: 50%;
 }
 
-/* ! FOOTER */
+/* ! ************************** */
+/* ! FOOTER ******************* */
+/* ! ************************** */
 footer#player-controls{
     background-color: var(--footer-bg-color);
     height: var(--hdr-ftr-height);
 
     padding: 10px;
-
-    font-size: .8rem;
 }
 
 footer > *{
@@ -445,18 +449,17 @@ footer .volume-icons > *{
     padding: 5px;
 }
 
-/* ! RESPONSIVE */
+/* ! ************************** */
+/* ! RESPONSIVE *************** */
+/* ! ************************** */
 .tablet{
     display: none;
 }
 
-@media screen and (min-width: 640px) {
+/* # bigger smartphones */
+@media screen and (min-width: 640px) {        
     main .flex-container{
         max-width: 760px;
-    }
-
-    #left-menubar{
-        flex-basis: var(--menubar-lg-width);
     }
 
     .tablet{
@@ -467,23 +470,31 @@ footer .volume-icons > *{
         display: flex;
     }
 
-    .smartphone{
+    .smartphone-only{
         display: none;
     }
 
+    /* for all the items that have display flex only when in smartphone mode */
     .smartphone.d-flex{
         display: block
     }
 
-    #left-menubar .logo{
-        width: 75%;
-    }
+    #left-menubar{
+        flex-basis: var(--menubar-lg-width);
+    }  
 
     #left-menubar .download{
         border-bottom: 1px solid var(--menubar-text-gray);
         padding-bottom: 5px;
     }
-
+    
+    #menubar-nav li.selected{
+        border-left: 5px solid yellowgreen;
+        border-right: 5px solid transparent;
+        margin-left: -15px;
+        padding-left: 10px;
+    }
+    
     footer .song-name-and-author{
         padding: 0 20px;
     }

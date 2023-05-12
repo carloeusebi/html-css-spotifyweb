@@ -27,58 +27,65 @@
 
             <!-- logo -->
            <div class="logo mb-20">
-                <img class="smartphone" src="img/logo-small.svg" alt="spotify logo">
+            <a href="#">
+                <img class="smartphone-only" src="img/logo-small.svg" alt="spotify logo">
                 <img class="tablet" src="img/logo.svg" alt="spotify logo">
+            </a>
            </div>
 
            <!-- navbar -->
            <nav id="menubar-nav">
                <ul class="mb-20">
-                    <li>
-                        <a class="d-flex align-center text-gray c-pointer" href="#">
+                    <li class="selected">
+                        <div class="d-flex align-center text-gray c-pointer">
                             <img class="svg-gray" src="img/home.svg" alt="home">
                             <span class="tablet">Home</span>
-                        </a>
+                        </div>
                     </li>
                     <li>
-                        <a class="d-flex align-center text-gray c-pointer" href="#">
+                        <div class="d-flex align-center text-gray c-pointer">
                             <img class="svg-gray" src="img/search.svg" alt="cerca">
                             <span class="tablet">Cerca</span>
-                        </a>
+                        </div>
                     </li>
                     <li>
-                        <a class="d-flex align-center text-gray c-pointer" href="#">
+                        <div class="d-flex align-center text-gray c-pointer">
                             <img class="svg-gray" src="img/libreria.svg" alt="libreria">
                             <span class="tablet">La tua libreria</span>
-                        </a>
+                        </div>
                     </li>
                 </ul>
             </nav>
 
             <!-- playlist -->
            <div class="playlist tablet text-gray">
-                <div class="mb-10">PLAYLIST</div>
+                <h3 class="mb-10">PLAYLIST</h3>
                 <div class="add-playlist d-flex align-center c-pointer mb-10">
                     <span class="plus-simbol d-flex align-center justify-center">+</span>
                     <span>Crea Playlist</span>
                 </div>
             </div>
             <ul id="playlist-list" class="tablet text-gray flex-shrink">
-                <li class="c-pointer">Nome Playlist</li>
-                <li class="c-pointer">Nome Playlist</li>
-                <li class="c-pointer">Nome Playlist</li>
-                <li class="c-pointer">Nome Playlist</li>
-                <li class="c-pointer">Nome Playlist</li>
-                <li class="c-pointer">Nome Playlist</li>
-                <li class="c-pointer">Nome Playlist</li>
-                <li class="c-pointer">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
+                <li class="c-pointer mb-10">Nome Playlist</li>
             </ul>
+
             <!-- this div push everything to the bottom -->
             <div class="flex-grow"></div>
+
+            <!-- download app -->
             <div class="download d-flex align-center text-gray c-pointer mb-10">
                 <img class="download-icon svg-gray" src="img/download.svg" alt="download">
                 <span class="ml-10 tablet">Installa app</span>
             </div>
+
+            <!-- account -->
             <div class="account d-flex align-center c-pointer">
                 <div class="profile-icon-background">
                     <img class="profile-icon" src="img/profile.svg" alt="profile">
@@ -93,7 +100,7 @@
 
             <!-- ! HEADER -->
             <header class="d-flex justify-end align-center">
-                <a href="#" class="btn hdr-btn">EFFETTUA L'UPGRADE</a>
+                <a href="#" class="btn">EFFETTUA L'UPGRADE</a>
             </header>
 
             <!-- ! MAIN -->
@@ -101,8 +108,8 @@
 
                 <!-- top navbar -->
                 <nav id="contents-navbar">
-                    <ul class="d-flex f-wrap justify-center text-gray flex-gap20">
-                        <li class="text-bold c-pointer">IN EVIDENZA</li>
+                    <ul class="d-flex f-wrap justify-center text-gray flex-gap20 font-small">
+                        <li class="text-bold c-pointer selected">IN EVIDENZA</li>
                         <li class="text-bold c-pointer">PODCAST</li>
                         <li class="text-bold c-pointer">CLASSIFICHE</li>
                         <li class="text-bold c-pointer">GENERI E MOOD</li>
@@ -121,7 +128,7 @@
                             <div class="album-cover mb-10">                   
                                 <img src="img/metal_lifting.jpg" alt="Metal lifting">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Heavy Metal</div>
                                 <div class="song-author text-gray mb-10">Subtitle</div>
                             </div>
@@ -132,9 +139,9 @@
                             <div class="album-cover mb-10">
                                 <img src="img/stranger.jpeg" alt="Stranger Things">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Stranger Things, Vol 1(a Netflix Original Series Soundtrack)</div>
-                                <div class="song-author text-gray mb-10">Kyle Dixon & Micheal Stain</div>
+                                <div class="song-author text-gray">Kyle Dixon & Micheal Stain</div>
                             </div>
                         </div>
 
@@ -143,7 +150,7 @@
                             <div class="album-cover mb-10">
                                 <img src="img/aquietplace.jpeg" alt="A quiet place">
                             </div>  
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">A quiet place</div>
                                 <div class="song-author text-gray mb-10">Subtitle</div>
                             </div>
@@ -154,7 +161,7 @@
                             <div class="album-cover mb-10">
                                 <img src="img/split.jpeg" alt="Split">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Split</div>
                                 <div class="song-author text-gray mb-10">Subtitle</div>
                             </div>
@@ -165,7 +172,7 @@
                             <div class="album-cover mb-10">
                                 <img src="img/cure.jpeg" alt="A cure for wellness">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">A cure for wellness</div>
                                 <div class="song-author text-gray mb-10">Subtitle</div>
                             </div>
@@ -176,7 +183,7 @@
                             <div class="album-cover mb-10">
                                 <img src="img/sinister.jpeg" alt="Sinister">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Sinister</div>
                                 <div class="song-author text-gray mb-10">Subtitle</div>
                             </div>
@@ -195,7 +202,7 @@
                             <div class="album-cover mb-10">
                                 <img src="img/radar.jpeg" alt="Release radar">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Release Radar</div>
                                 <div class="song-author text-gray mb-10"></div>
                             </div>
@@ -205,7 +212,7 @@
                             <div class="album-cover mb-10">
                                 <img src="img/mixdaily.jpeg" alt="Daily mix">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Daily Mix 1</div>
                                 <div class="song-author text-gray mb-10"></div>
                             </div>
@@ -224,7 +231,7 @@
                             <div class="round-album album-cover mb-10">
                                 <img class="mb-10 round-img" src="img/youg.jpeg" alt="Youg">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Lana del Rey</div>
                                 <div class="song-author text-gray mb-10"></div>
                             </div>
@@ -234,7 +241,7 @@
                             <div class="round-album album-cover mb-10">
                                 <img class="mb-10 round-img" src="img/einaudi.jpeg" alt="Ludovico Einaudi">
                             </div>
-                            <div class="album-description text-align-center">
+                            <div class="album-description text-align-center font-small">
                                 <div class="song-name text-bold mb-10">Ludovico Einaudi</div>
                                 <div class="song-author text-gray mb-10"></div>
                             </div>
@@ -250,11 +257,12 @@
 
     <!-- ! FOOTER -->
     <!-- this is the bottom part of the screen, it contains player controls -->
-    <footer id="player-controls" class="d-flex justify-center">
+    <footer id="player-controls" class="d-flex justify-center font-small">
         <!-- footer has no container, elements are as spread out as screen size -->
+
         <!-- song details -->
         <div class="song-details d-flex align-center flex-shrink">
-            <div class="album-cover tablet">
+            <div class="album-cover tablet c-pointer">
                 <img src="img/sinister.jpeg" alt="sinister album">
             </div>
             <div class="song-name-and-author">
@@ -280,7 +288,7 @@
             <!-- progress bar -->
             <div class="progress d-flex align-center justify-center">
                 <div class="minutes min-played text-bold">0:25</div>
-                <div class="progress-bar c-pointer">
+                <div class="progress-bar song-bar c-pointer">
                     <div class="played"></div>
                 </div>
                 <div class="minutes min-left text-bold">4:35</div>
@@ -299,9 +307,5 @@
             </div>
         </div>
     </footer>
-
-
-
-
 </body>
 </html>
