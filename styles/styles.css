@@ -51,6 +51,10 @@ a{
     justify-content: flex-start;
 }
 
+.d-flex.justify-center{
+    justify-content: center;
+}
+
 .d-flex.justify-end{
     justify-content: flex-end;
 }
@@ -124,6 +128,15 @@ main{
 footer#player-controls{
     background-color: var(--footer-bg-color);
     height: var(--hdr-ftr-height);
+
+    color: white;
+    
+    padding: 20px;
+}
+
+footer > *{
+    border: 1px dashed white;
+    height: 100%;
 }
 
 
