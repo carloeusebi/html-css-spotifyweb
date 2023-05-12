@@ -1,0 +1,18 @@
+/* css reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ! custom properties */
+:root{
+    --navbar-bg-color: #000000;
+    --footer-bg-color: #282828;
+    --main-bg-color: #141922;
+}
+
+body{
+    font-family: sans-serif;
+}
