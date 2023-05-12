@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Carlo Eusebi">
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="icon" href="img/favicon.ico" text="image/ico">
+    <link rel="icon" href="img/favicon.ico" type="image/ico">
     <!-- font awesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'>
     <!-- Monsterrat font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet">
     <!-- styles.css -->
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
 </head>
@@ -26,9 +26,9 @@
         <div id="left-menubar" class="d-flex flex-column">
 
             <!-- logo -->
-           <div class="logo mb-20">                
-                <img class="smartphone" src="img/logo-small.svg" alt="spotify logo">                
-                <img class="tablet" src="img/logo.svg" alt="spotify logo">                
+           <div class="logo mb-20">
+                <img class="smartphone" src="img/logo-small.svg" alt="spotify logo">
+                <img class="tablet" src="img/logo.svg" alt="spotify logo">
            </div>
 
            <!-- navbar -->
@@ -70,8 +70,8 @@
                 <li>Nome Playlist</li>
                 <li>Nome Playlist</li>
                 <li>Nome Playlist</li>
-                <li>Nome Playlist</li>                   
-                <li>Nome Playlist</li>                   
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
             </ul>
             <!-- this div push everything to the bottom -->
             <div class="flex-grow"></div>
@@ -120,21 +120,21 @@
                         <div class="flex-item"></div>
                         <div class="flex-item"></div>
                         <div class="flex-item"></div>
-                    </div>     
+                    </div>
                 </section>
                 <section id="made-for">
                     <h2>Creato per John Doe</h2>
                     <div class="d-flex f-wrap">
                         <div class="flex-item"></div>
                         <div class="flex-item"></div>
-                    </div>     
+                    </div>
                 </section>
                 <section id="popular-artists">
                     <h2>Artisti più popolari</h2>
                     <div class="d-flex f-wrap">
                         <div class="flex-item"></div>
                         <div class="flex-item"></div>
-                    </div>     
+                    </div>
                 </section>
 
 
@@ -145,20 +145,55 @@
     <!-- ! FOOTER -->
     <!-- this is the bottom part of the screen, it contains player controls -->
     <footer id="player-controls" class="d-flex justify-center">
-    <!-- footer has no container, elements are as spread out as screen size -->
-        <div class="song-details d-flex align-center">
-            song details
+        <!-- footer has no container, elements are as spread out as screen size -->
+        <!-- song details -->
+        <div class="song-details d-flex align-center flex-shrink">
+            <div class="album-cover tablet">
+                <img src="img/sinister.jpeg" alt="sinister album">
+            </div>
+            <div class="song-name-and-author">
+                <div class="song-author text-bold">Sinister</div>
+                <div class="song-name text-gray">Brano Nome</div>
+            </div>
+            <div class="smartphone buttons d-flex flex-column text-gray">
+                <i class="fa-regular fa-heart c-pointer"></i>
+                <i class="fa-regular fa-folder c-pointer"></i>
+            </div>
         </div>
-        <div class="controls flex-grow d-flex justify-center align-center">
-            play stop next
+
+        <!-- song controls -->
+        <div class="controls d-flex flex-column justify-center">
+            <!-- controls -->
+            <div class="control-buttons d-flex align-center justify-center flex-gap20">
+                <i class="fa-solid fa-shuffle c-pointer"></i>
+                <i class="fa-solid fa-backward-step c-pointer"></i>
+                <span class="play-btn-circle d-flex align-center justify-center c-pointer">
+                    <i class="fa-solid fa-play"></i>
+                </span>
+                <i class="fa-solid fa-forward-step c-pointer"></i>
+                <i class="fa-solid fa-rotate-right c-pointer"></i>
+            </div>
+            <!-- progress bar -->
+            <div class="progress d-flex align-center justify-center">
+                <div class="minutes min-played text-bold">0:25</div>
+                <div class="progress-bar c-pointer"></div>
+                <div class="minutes min-left text-bold">4:35</div>
+            </div>
         </div>
-        <div class="volume d-flex align-center">
-            volume
+
+        <!-- volume controls -->
+        <div class="volume d-flex align-center justify-end flex-shrink">
+            <div class="smartphone volume-icons d-flex flex-column">
+                <i class="fa-solid fa-list c-pointer"></i>
+                <i class="fa-solid fa-desktop c-pointer"></i>
+                <i class="fa-solid fa-volume-high c-pointer"></i>
+            </div>
+            <div class="progress-bar volume-bar c-pointer"></div>
         </div>
     </footer>
 
 
 
-    
+
 </body>
 </html>
