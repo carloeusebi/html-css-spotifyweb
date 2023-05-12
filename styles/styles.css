@@ -42,6 +42,7 @@ ul{
 
 img{
     max-width: 100%;
+    display: block;
 }
 
 #upper-screen{
@@ -176,6 +177,10 @@ header{
     padding-right: 10px;
 }
 
+header .btn:hover{
+    transform: scale(1.05);
+}
+
 /* ! MENUBAR */
 #left-menubar{
     background-color: var(--menubar-bg-color);
@@ -211,7 +216,6 @@ header{
 }
 
 #playlist-list li{
-    cursor: pointer;
     margin-bottom: 10px;
 }
 
@@ -225,9 +229,19 @@ header{
     margin-right: 10px;
 }
 
+#left-menubar .c-pointer:hover{
+    color: white;
+}
+
+#left-menubar .c-pointer:hover .svg-gray{
+    filter: invert(0);
+}
+
+#left-menubar .c-pointer:hover .plus-simbol{
+    background-color: #fff;
+}
+
 /* # download and profile */
-
-
 #left-menubar .download-icon{
     width: 15px;
 }
@@ -251,6 +265,11 @@ main{
 
 #contents-navbar li{
     font-size: .7rem;
+    transition: color 300ms;
+}
+
+#contents-navbar .c-pointer:hover{
+    color: white;
 }
 
 main .flex-container{
@@ -258,16 +277,41 @@ main .flex-container{
     max-width: 600px;
 }
 
-.d-flex > .flex-item{
+main .d-flex > .flex-item{
     flex: 0 0 50%;
     padding: 10px;
+}
+
+main .flex-item .album-cover{
+    position: relative;
+}
+
+main .album-cover:hover::after{
+    display: inline-block;
+    content: '\f144';
+    font: var(--fa-font-regular);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    background-color: rgba(0,0,0,.75);
+    opacity: 1;
+}
+
+main .round-album:hover::after{
+    border-radius: 50%;
 }
 
 /* ! FOOTER */
 footer#player-controls{
     background-color: var(--footer-bg-color);
     height: var(--hdr-ftr-height);
-    
+
     padding: 10px;
 
     font-size: .8rem;
@@ -281,28 +325,34 @@ footer > *{
 /* # song details */
  .song-details .album-cover{
     width: 55px;
-    height: 55px;      
+    height: 55px;
 }
 
-footer .song-details i{
+footer .song-details .fa-regular{
     padding: 3px;
+}
+
+footer .song-name:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+footer .song-details .fa-regular:hover{
+    color: white;
 }
 
 
 /* # controls */
-footer .play-btn-circle{
-    position: relative;
-    width: 28px;
-    height: 28px;
-    border: 3px solid white;
-    border-radius: 50%;
+footer .control-buttons i:hover{
+    transition: text-shadow 300ms;
 }
 
-footer .play-btn-circle > .fa-play{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);   
+footer .control-buttons i:hover{
+    text-shadow: 0 0 5px white;
+}
+
+footer .control-buttons .fa-circle-play:hover{
+    transform: scale(1.05);
 }
 
 footer .progress-bar{
@@ -315,15 +365,29 @@ footer .progress-bar{
     position: relative;
 }
 
-footer .progress-bar::after{
-    content: '';
-    display: inline-block;
+footer .progress-bar .played{
     position: absolute;
     background-color: white;
-    height: 100%;
     width: 10%;
+    height: 100%;
     left: 0;
     top: 0;
+}
+
+footer .progress-bar:hover .played{
+    background-color: yellowgreen;
+}
+
+footer .progress-bar:hover .played::after{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
 footer .minutes{
@@ -336,7 +400,7 @@ footer .progress-bar.volume-bar{
     width: 15%;
 }
 
-footer .progress-bar.volume-bar::after{
+footer .progress-bar.volume-bar .played{
     width: 50%;
 }
 
@@ -355,9 +419,9 @@ footer .volume-icons > *{
     }
 
     #left-menubar{
-        flex-basis: var(--menubar-lg-width);    
+        flex-basis: var(--menubar-lg-width);
     }
-    
+
     .tablet{
         display: inline-block;
     }
@@ -365,7 +429,7 @@ footer .volume-icons > *{
     .tablet.d-flex{
         display: flex;
     }
-    
+
     .smartphone{
         display: none;
     }
@@ -393,8 +457,8 @@ footer .volume-icons > *{
     main .flex-container{
         max-width: 980px;
     }
-    
-    .d-flex > .flex-item{
+
+    main .d-flex > .flex-item{
         flex: 0 0 25%;
     }
 }
@@ -405,7 +469,7 @@ footer .volume-icons > *{
         max-width: 1400px;
     }
 
-    .d-flex > .flex-item{
+    main .d-flex > .flex-item{
         flex: 0 0 calc(100% / 6);
     }
 }
