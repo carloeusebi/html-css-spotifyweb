@@ -12,6 +12,9 @@
     --hdr-bg-color: #080b12;
     --footer-bg-color: #282828;
     --main-bg-color: #141922;
+    --menubar-text-gray: #ffffff60;
+
+
     --hdr-ftr-height: 75px;
     --menubar-lg-width: 250px;
     --menubar-xs-width: 50px;
@@ -33,11 +36,30 @@ ul{
     list-style: none;
 }
 
+img{
+    max-width: 100%;
+}
+
 #upper-screen{
     height: calc(100vh - var(--hdr-ftr-height));
 }
 
 /* ! UTILITIES */
+.svg-gray{
+    filter:invert(.4)
+}
+
+.text-gray{
+    color: var(--menubar-text-gray);
+}
+
+.c-pointer{
+    cursor: pointer;
+}
+
+.text-bold{
+    font-weight: bold;
+}
 
 /* # flex utilities */
 .d-flex{
@@ -76,6 +98,35 @@ ul{
     flex-grow: 1;
 }
 
+.d-flex .flex-srhink{
+    flex-shrink: 1;
+}
+
+/* # margins and paddings */
+.mr-10{
+    margin-right: 10px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
 /* # buttons */
 .btn{
     padding: 10px 20px;
@@ -103,19 +154,62 @@ header{
     flex: 0 0 var(--menubar-xs-width);
     height: 100%;
 
-    color: white;
     overflow-y: hidden;
 
-    padding: 20px;
+    padding: 15px;
 }
 
 #left-menubar > *{
     width: 100%;
 }
 
+#menubar-nav img{
+    width: 30px;
+}
+
+#menubar-nav li{
+    margin-bottom: 5px;
+}
+
+/* #Playlist */
 #playlist-list{
-    height: 300px;
+    min-height: 50px;
     overflow-y: auto;
+}
+
+.playlist div:first-child{
+    color: white;
+    font-weight: bold;
+}
+
+#playlist-list li{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.add-playlist .plus-simbol{
+    color: black;
+    width: 35px;
+    height: 35px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: var(--menubar-text-gray);
+    margin-right: 10px;
+}
+
+/* # download and profile */
+
+
+#left-menubar .download-icon{
+    width: 15px;
+}
+
+#left-menubar .profile-icon-background{
+    width: 20px;
+    height: 20px;
+    background-color: var(--menubar-text-gray);
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /* ! MAIN */
@@ -145,11 +239,32 @@ footer > *{
 }
 
 
-/* ! MEDIA QUERY */
+/* ! RESPONSIVE */
+.tablet{
+    display: none;
+}
+
 
 @media screen and (min-width: 640px) {
     #left-menubar{
         flex-basis: var(--menubar-lg-width);    
+    }
+    
+    .tablet{
+        display: inline-block;
+    }
+    
+    .smartphone{
+        display: none;
+    }
+
+    #left-menubar .logo{
+        width: 75%;
+    }
+
+    #left-menubar .download{
+        border-bottom: 1px solid var(--menubar-text-gray);
+        padding-bottom: 5px;
     }
 }
 

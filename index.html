@@ -24,65 +24,66 @@
 
         <!-- ! LEFT MENU BAR -->
         <div id="left-menubar" class="d-flex flex-column">
-           <div class="logo">logo</div>
+
+            <!-- logo -->
+           <div class="logo mb-20">                
+                <img class="smartphone" src="img/logo-small.svg" alt="spotify logo">                
+                <img class="tablet" src="img/logo.svg" alt="spotify logo">                
+           </div>
+
+           <!-- navbar -->
            <nav id="menubar-nav">
-               <ul>
-                   <li><a href="#"></a>link</li>
-                   <li><a href="#"></a>link</li>
-                   <li><a href="#"></a>link</li>
+               <ul class="mb-20">
+                    <li>
+                        <a class="d-flex align-center text-gray" href="#">
+                            <img class="svg-gray" src="img/home.svg" alt="home">
+                            <span class="tablet">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex align-center text-gray" href="#">
+                            <img class="svg-gray" src="img/search.svg" alt="cerca">
+                            <span class="tablet">Cerca</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex align-center text-gray" href="#">
+                            <img class="svg-gray" src="img/libreria.svg" alt="libreria">
+                            <span class="tablet">La tua libreria</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-           <div class="playlist">playlist
-                <div class="add-playlist">+</div>
-                <ul id="playlist-list">
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                </ul>
+
+            <!-- playlist -->
+           <div class="playlist tablet text-gray">
+                <div class="mb-10">PLAYLIST</div>
+                <div class="add-playlist d-flex align-center c-pointer mb-10">
+                    <span class="plus-simbol d-flex align-center justify-center">+</span>
+                    <span>Crea Playlist</span>
+                </div>
             </div>
+            <ul id="playlist-list" class="tablet text-gray flex-shrink">
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>                   
+                <li>Nome Playlist</li>                   
+            </ul>
             <!-- this div push everything to the bottom -->
             <div class="flex-grow"></div>
-            <div class="download">
-                download
+            <div class="download d-flex align-center text-gray c-pointer mb-10">
+                <img class="download-icon svg-gray" src="img/download.svg" alt="download">
+                <span class="ml-10 tablet">Installa app</span>
             </div>
-            <div class="account">
-                account
+            <div class="account d-flex align-center c-pointer">
+                <div class="profile-icon-background">
+                    <img class="profile-icon" src="img/profile.svg" alt="profile">
+                </div>
+                <span class="ml-10 tablet text-bold">John Doe</span>
             </div>
 
         </div>
