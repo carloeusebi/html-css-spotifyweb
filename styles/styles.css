@@ -30,11 +30,6 @@ a{
 
 #upper-screen{
     height: calc(100vh - var(--hdr-ftr-height));
-    display: flex;
-}
-
-#right-content{
-    flex-grow: 1;
 }
 
 /* ! UTILITIES */
@@ -44,12 +39,32 @@ a{
     display: flex;
 }
 
+.d-flex.flex-column{
+    flex-direction: column;
+}
+
+.d-flex.f-wrap{
+    flex-wrap: wrap;
+}
+
+.d-flex.justify-start{
+    justify-content: flex-start;
+}
+
 .d-flex.justify-end{
     justify-content: flex-end;
 }
 
+.d-flex.align-start{
+    align-items: flex-start;
+}
+
 .d-flex.align-center{
     align-items: center;
+}
+
+.d-flex .flex-grow{
+    flex-grow: 1;
 }
 
 /* # buttons */
@@ -79,7 +94,20 @@ header{
     background-color: var(--menubar-bg-color);
     flex: 0 0 var(--menubar-xs-width);
     height: 100%;
-    
+
+    color: white;
+    overflow-y: hidden;
+
+    padding: 20px;
+}
+
+#left-menubar > *{
+    width: 100%;
+}
+
+#playlist-list{
+    height: 300px;
+    overflow-y: auto;
 }
 
 /* ! MAIN */
@@ -93,7 +121,7 @@ main{
 }
 
 /* ! FOOTER */
-footer{
+footer#player-controls{
     background-color: var(--footer-bg-color);
     height: var(--hdr-ftr-height);
 }
