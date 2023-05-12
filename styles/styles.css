@@ -6,13 +6,73 @@
     box-sizing: border-box;
 }
 
-/* ! custom properties */
+/* ! CUSTOM PROPERTIES */
 :root{
-    --navbar-bg-color: #000000;
+    --menubar-bg-color: #000000;
+    --hdr-bg-color: #080b12;
     --footer-bg-color: #282828;
     --main-bg-color: #141922;
+    --hdr-ftr-height: 75px;
+    --menubar-lg-width: 250px;
+    --menubar-xs-width: 50px;
 }
 
+/* ! GENERALS */
+
 body{
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#upper-screen{
+    height: calc(100vh - var(--hdr-ftr-height));
+    display: flex;
+}
+
+#right-content{
+    flex-grow: 1;
+}
+
+/* ! UTILITIES */
+
+/* ! HEADER */
+header{
+    background-color: var(--hdr-bg-color);
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100% ;
+    height: var(--hdr-ftr-height);
+}
+
+/* ! MENUBAR */
+#left-menubar{
+    background-color: var(--menubar-bg-color);
+    flex: 0 0 var(--menubar-xs-width);
+    height: 100%;
+    
+}
+
+/* ! MAIN */
+main{
+    background-color: var(--main-bg-color);
+    overflow-y: auto;
+    height: calc(100vh - var(--hdr-ftr-height) * 2);
+    flex-grow: 1;
+
+    color: white;
+}
+
+/* ! FOOTER */
+footer{
+    background-color: var(--footer-bg-color);
+    height: var(--hdr-ftr-height);
+}
+
+
+/* ! MEDIA QUERY */
+@media screen and (min-width: 640px) {
+#left-menubar{
+    flex-basis: var(--menubar-lg-width);    
+}
 }
