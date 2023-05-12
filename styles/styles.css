@@ -23,6 +23,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 #upper-screen{
     height: calc(100vh - var(--hdr-ftr-height));
@@ -35,14 +39,39 @@ body{
 
 /* ! UTILITIES */
 
+/* # flex utilities */
+.d-flex{
+    display: flex;
+}
+
+.d-flex.justify-end{
+    justify-content: flex-end;
+}
+
+.d-flex.align-center{
+    align-items: center;
+}
+
+/* # buttons */
+.btn{
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
 /* ! HEADER */
 header{
     background-color: var(--hdr-bg-color);
+
     position: sticky;
     left: 0;
     top: 0;
     width: 100% ;
     height: var(--hdr-ftr-height);
+
+    padding-right: 10px;
 }
 
 /* ! MENUBAR */
