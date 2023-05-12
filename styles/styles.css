@@ -32,6 +32,10 @@ a{
     color:white;
 }
 
+h2{
+    margin: 20px 0;
+}
+
 ul{
     list-style: none;
 }
@@ -42,6 +46,10 @@ img{
 
 #upper-screen{
     height: calc(100vh - var(--hdr-ftr-height));
+}
+
+#right-content{
+    max-width: calc(100% - var(--menubar-xs-width));
 }
 
 /* ! UTILITIES */
@@ -59,6 +67,14 @@ img{
 
 .text-bold{
     font-weight: bold;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.round-img{
+    border-radius: 50%;
 }
 
 /* # flex utilities */
@@ -229,12 +245,22 @@ main{
     background-color: var(--main-bg-color);
     overflow-y: auto;
     height: calc(100vh - var(--hdr-ftr-height) * 2);
+
+    padding: 30px;
+}
+
+#contents-navbar li{
+    font-size: .7rem;
+}
+
+main .flex-container{
+    margin: 0 -10px;
+    max-width: 600px;
 }
 
 .d-flex > .flex-item{
-    min-height: 200px;
-    border: 1px dashed white;
     flex: 0 0 50%;
+    padding: 10px;
 }
 
 /* ! FOOTER */
@@ -265,10 +291,18 @@ footer .song-details i{
 
 /* # controls */
 footer .play-btn-circle{
+    position: relative;
     width: 28px;
     height: 28px;
     border: 3px solid white;
     border-radius: 50%;
+}
+
+footer .play-btn-circle > .fa-play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   
 }
 
 footer .progress-bar{
@@ -316,6 +350,10 @@ footer .volume-icons > *{
 }
 
 @media screen and (min-width: 640px) {
+    main .flex-container{
+        max-width: 760px;
+    }
+
     #left-menubar{
         flex-basis: var(--menubar-lg-width);    
     }
@@ -351,15 +389,23 @@ footer .volume-icons > *{
 }
 
 /* # tablet */
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
+    main .flex-container{
+        max-width: 980px;
+    }
+    
     .d-flex > .flex-item{
-        flex-basis: 25%;
+        flex: 0 0 25%;
     }
 }
 
 /* # laptop */
 @media screen and (min-width: 992px) {
+    main .flex-container{
+        max-width: 1400px;
+    }
+
     .d-flex > .flex-item{
-        flex-basis: calc(100% / 6);
+        flex: 0 0 calc(100% / 6);
     }
 }
