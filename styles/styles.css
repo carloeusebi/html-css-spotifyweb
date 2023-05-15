@@ -68,6 +68,7 @@ img{
 
 main::-webkit-scrollbar{
     width: 10px;
+    background-color: rgba(0,0,0,.5);
 }
 
 /* ! ************************** */
@@ -156,6 +157,17 @@ main::-webkit-scrollbar{
 }
 
 /* # margins and paddings */
+.mt-10{
+    margin-top: 10px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+
 .mr-10{
     margin-right: 10px;
 }
@@ -192,13 +204,13 @@ main::-webkit-scrollbar{
 /* ! HEADER ******************* */
 /* ! ************************** */
 header{
-    background-color: var(--hdr-bg-color);
+    background-color: rgba(0,0,0,.5);
 
     position: sticky;
     left: 0;
     top: 0;
-    width: 100% ;
     height: var(--hdr-ftr-height);
+    z-index: 1;
 
     padding-right: 10px;
 }
@@ -283,8 +295,10 @@ header .btn:hover{
 main{
     background-color: var(--main-bg-color);
     overflow-y: auto;
-    height: calc(100vh - var(--hdr-ftr-height) * 2);
+    height: calc(100vh - var(--hdr-ftr-height));
+}
 
+main section{
     padding: 30px;
 }
 
